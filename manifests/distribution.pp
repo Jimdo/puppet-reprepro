@@ -73,6 +73,6 @@ define reprepro::distribution (
   exec {"export distribution ${name}":
     command     => "su -c 'reprepro -b ${reprepro::params::basedir}/${repository} export ${codename}' reprepro",
     refreshonly => true,
-    require     => [User[reprepro], Reprepro::Repository[$repository]],
+    require     => [User[reprepro], Reprepro::Repository[$repository], Package['reprepro']],
   }
 }
