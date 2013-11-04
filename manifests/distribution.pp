@@ -75,4 +75,11 @@ define reprepro::distribution (
     refreshonly => true,
     require     => [User[reprepro], Reprepro::Repository[$repository], Package['reprepro']],
   }
+
+  if $sign_with == '' {
+    file {"${reprepro::params::basedir}/${repository}/dists/${codename}/Release.gpg":
+      ensure  => 'absent',
+      require => Exec["export distribution ${name}"],
+    }
+  }
 }
