@@ -1,22 +1,22 @@
-Origin: <%= origin %>
-Label: <%= label %>
-Suite: <%= suite %>
-Codename: <%= codename %>
-Architectures: <%= architectures %>
-Components: <%= components %>
-Description: <%= description %>
-DebIndices: <%= deb_indices %>
-DscIndices: <%= dsc_indices %>
-<% if sign_with != "" -%>
-SignWith: <%= sign_with %>
+Origin: <%= @origin %>
+Label: <%= @label %>
+Suite: <%= @suite %>
+Codename: <%= @codename %>
+Architectures: <%= @architectures %>
+Components: <%= @components %>
+Description: <%= @description %>
+DebIndices: <%= @deb_indices %>
+DscIndices: <%= @dsc_indices %>
+<% if @sign_with != "" -%>
+SignWith: <%= @sign_with %>
 <% end -%>
-<% if uploaders != "" -%>
-Uploaders: <%= uploaders -%> 
+<% if @uploaders != "" -%>
+Uploaders: <%= @uploaders -%> 
 <% end -%>
-<% if update != "" -%>
-Update: <%= update %> 
+<% if @update != "" -%>
+Update: <%= @update %> 
 <% end -%>
-<% if not_automatic != "" -%>
-NotAutomatic: <%= not_automatic %>
+<% if @not_automatic != "" -%>
+NotAutomatic: <%= @not_automatic %>
 <% end -%>
 
